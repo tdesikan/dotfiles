@@ -1,3 +1,9 @@
 [submodule "vim/bundle/markdown"]
 	path = vim/bundle/markdown
 	url = https://github.com/plasticboy/vim-markdown
+[submodule "vim/bundle/tritiumscript"]
+	path = vim/bundle/tritiumscript
+	url = git@github.com:tdesikan/vim-tritium.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
