@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ ! -d ${HOME}/.dotfiles ] ; then
+  echo "NO DOTFILES - checking out for you"
+  echo $HOME
+  cd ${HOME} && git checkout git@github.com:tdesikan/dotfiles.git .dotfiles
+  cd ${HOME}/.dotfiles &&  git submodule update --init
+fi
+
+#setup vim
+ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/.vimrc
+ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
+
+#setup bash
+ln -s ${HOME}/.dotfiles/bash/bashrc ${HOME}/.bashrc
+ln -s ${HOME}/.dotfiles/bash/bash_profile ${HOME}/.bash_profile
+ln -s ${HOME}/.dotfiles/bash/bash_aliases ${HOME}/.bash_aliases
