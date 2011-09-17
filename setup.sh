@@ -1,11 +1,14 @@
 #!/bin/bash
 
 if [ ! -d ${HOME}/.dotfiles ] ; then
-  echo "NO DOTFILES - checking out for you"
+  echo "No dotfiles - checking out for you"
   echo $HOME
   cd ${HOME} && git clone git@github.com:tdesikan/dotfiles.git .dotfiles
   cd ${HOME}/.dotfiles &&  git submodule update --init
 fi
+
+echo "Updating dotfiles"
+cd ${HOME}/.dotfiles && git pull && git submodule update --init
 
 #setup vim
 ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/.vimrc
