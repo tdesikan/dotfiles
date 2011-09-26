@@ -18,3 +18,4 @@ ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
 ln -s ${HOME}/.dotfiles/bash/bashrc ${HOME}/.bashrc
 ln -s ${HOME}/.dotfiles/bash/bash_profile ${HOME}/.bash_profile
 ln -s ${HOME}/.dotfiles/bash/bash_aliases ${HOME}/.bash_aliases
+ln -s ${HOME}/.dotfiles/bash/bash_secret ${HOME}/.bash_secret

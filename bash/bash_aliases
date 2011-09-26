@@ -7,10 +7,6 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 # gemsets and put it in the prompt ala https://rvm.beginrescueend.com/workflow/prompt/
 PS1="\$(~/.rvm/bin/rvm-prompt g)|$PS1"
 
-# list out the gemsets and use the latest one; if a gemset is set there will be a "=>"
-MNH=`rvm gemset list | tail -2 | head -1 | awk '{sub(/=>\ /, "");print}'`
-rvm gemset use $MNH --default
-
 # my execs are in bin
 export PATH=~/workspace/bin:$PATH
 
@@ -22,19 +18,3 @@ alias cls='clear'
 # vi luvs
 # alias vi='gvim'
 alias vim='gvim'
-
-# repo
-alias belk='cd ~/workspace/mnh/belk'
-alias asda='cd ~/workspace/mnh/asda'
-alias macys='cd ~/workspace/mnh/macys'
-alias docs='cd ~/workspace/me/einstein/guide'
-alias hg='rvm gemset use global && cd ~/workspace/me/mercury'
-
-# run v2
-alias mnh='rvmsudo moov server . --no-auto-reload --log-level=debug'
-alias mnh_debug='rvmsudo moov debug .'
-alias mnh_kill='sudo killall ruby'
-
-# office VPN
-alias vpn='sudo /etc/init.d/openvpn start'
-alias vpn_stop='sudo /etc/init.d/openvpn stop'
