@@ -22,10 +22,11 @@ alias curliphone='curl -o /dev/null -v -H "User-Agent: Mozilla/5.0 (iPhone; U; C
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-  PATH="$HOME/bin:$PATH"
+  export PATH="$HOME/bin:$PATH"
 fi
 
 # add Go
 if [ -d "$HOME/workspace/ext/go/bin" ] ; then
-  PATH="$HOME/workspace/ext/go/bin:$PATH"
+  export PATH="$HOME/workspace/ext/go/bin:$PATH"
+  export GOROOT="$HOME/workspace/ext/go"
 fi
