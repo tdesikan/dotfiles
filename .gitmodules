@@ -10,3 +10,6 @@
 [submodule "vim/bundle/nginx"]
 	path = vim/bundle/nginx
 	url = https://github.com/vim-scripts/nginx.vim.git
+[submodule "vim/bundle/varnish"]
+	path = vim/bundle/varnish
+	url = https://github.com/empanda/vim-varnish.git
