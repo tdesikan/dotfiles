@@ -12,10 +12,11 @@ alias cd..='cd ..'
 alias ks='ls'
 alias cls='clear'
 
-# vi luvs
+# text editor luvs
 if [[ `uname` == 'Darwin' ]]; then
   # on Mac, download and install MacVim
   alias gvim='open -a MacVim.app'
+  alias gedit='open -a gedit.app'
 fi
 alias vim='gvim'
 
