@@ -4,8 +4,16 @@
 export PATH=/var/lib/gems/1.8/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-# gemsets and put it in the prompt ala https://rvm.beginrescueend.com/workflow/prompt/
-PS1="\$(~/.rvm/bin/rvm-prompt g)|$PS1"
+# some custom prompt stuffs
+export PS1="\[\033[1;30m\]["              # gray:  "["
+PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
+PS1="$PS1\[\033[1;30m\]] "                # gray:  "] "
+PS1="$PS1\[\033[0;31m\]\$(rvm-prompt)"    # red: " " + $rvm_gemset
+PS1="$PS1\[\e[33;1m\]\$(__git_ps1)"       # yellow: " *" + $git_branch
+PS1="$PS1\[\033[1;37m\] : "               # white :
+PS1="$PS1\[\033[01;34m\]\w"               # blue: $working_dir
+PS1="$PS1\[\033[00m\]\n\$ "               # gray:  "\n$ "
+
 
 # common mistakes i make
 alias cd..='cd ..'
