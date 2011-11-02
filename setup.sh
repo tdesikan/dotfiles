@@ -10,12 +10,15 @@ fi
 echo "Updating dotfiles"
 cd ${HOME}/.dotfiles && git pull && git submodule update --init
 
-#setup vim
+# setup vim
 ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/.vimrc
 ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
 
-#setup bash
+# setup bash
 ln -s ${HOME}/.dotfiles/bash/bashrc ${HOME}/.bashrc
 ln -s ${HOME}/.dotfiles/bash/bash_profile ${HOME}/.bash_profile
 ln -s ${HOME}/.dotfiles/bash/bash_aliases ${HOME}/.bash_aliases
 ln -s ${HOME}/.dotfiles/bash/bash_secret ${HOME}/.bash_secret
+
+# setup rvm
+ln -s ${HOME}/.dotfiles/rvm/rvmrc ${HOME}/.rvmrc
