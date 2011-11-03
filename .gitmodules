@@ -13,3 +13,6 @@
 [submodule "vim/bundle/varnish"]
 	path = vim/bundle/varnish
 	url = https://github.com/empanda/vim-varnish.git
+[submodule "vim/bundle/scss"]
+	path = vim/bundle/scss
+	url = https://github.com/cakebaker/scss-syntax.vim.git
