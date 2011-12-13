@@ -17,20 +17,25 @@ PS1="$PS1\[\033[1;37m\] : "               # white :
 PS1="$PS1\[\033[01;34m\]\w"               # blue: $working_dir
 PS1="$PS1\[\033[00m\]\n\$ "               # gray:  "\n$ "
 
-
 # common mistakes i make
 alias cd..='cd ..'
 alias ks='ls'
 alias cls='clear'
 
 # text editor luvs
+alias vim='gvim'
+
+# Some Mac stuuff ... on Mac, download and install MacVim
 if [[ `uname` == 'Darwin' ]]; then
-  # on Mac, download and install MacVim
+ 
+  # Added this for bash completion on the Mac
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
+
   alias gvim='open -a MacVim.app'
   alias gedit='open -a gedit.app'
 fi
-alias vim='gvim'
-
 
 # mobile user agents
 alias curldroid='curl -o /dev/null -v -H "User-Agent: Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" '
