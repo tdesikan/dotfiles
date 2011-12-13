@@ -4,6 +4,9 @@
 export PATH=/var/lib/gems/1.8/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+# gvm
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
 # some custom prompt stuffs
 export PS1="\[\033[1;30m\]["              # gray:  "["
 PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
