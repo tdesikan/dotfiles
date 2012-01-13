@@ -16,3 +16,6 @@
 [submodule "vim/bundle/scss"]
 	path = vim/bundle/scss
 	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vim/bundle/golang"]
+	path = vim/bundle/golang
+	url = https://github.com/jnwhiteh/vim-golang
