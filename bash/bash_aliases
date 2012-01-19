@@ -3,9 +3,11 @@
 # rvm
 export PATH=/var/lib/gems/1.8/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+rvm use 1.9.2-p180 --default # always this Ruby
 
 # gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+gvm use release.r60.3
 
 # some custom prompt stuffs
 export PS1="\[\033[1;30m\]["              # gray:  "["
