@@ -35,6 +35,11 @@ if [[ `uname` == 'Darwin' ]]; then
     . `brew --prefix`/etc/bash_completion
   fi
 
+  # Added this for git bash completion on the Mac
+  if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then 
+    . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+  fi
+
   alias gvim='open -a MacVim.app'
   alias gedit='open -a gedit.app'
 fi
