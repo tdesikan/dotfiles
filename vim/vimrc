@@ -159,7 +159,9 @@ if has("gui_running")
   " Remove Toolbar
   set guioptions-=T
   " No crazy font
-  set guifont=Courier\ New\ 8 
+  set guifont=Courier\ New\ 8
+  " long screen
+  set lines=50
 else
   colorscheme metacosm
 endif
