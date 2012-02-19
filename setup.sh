@@ -22,3 +22,6 @@ ln -s ${HOME}/.dotfiles/bash/bash_secret ${HOME}/.bash_secret
 
 # setup rvm
 ln -s ${HOME}/.dotfiles/rvm/rvmrc ${HOME}/.rvmrc
+
+# setup gem
+ln -s ${HOME}/.dotfiles/gem/gemrc ${HOME}/.gemrc
