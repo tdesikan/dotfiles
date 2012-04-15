@@ -24,7 +24,10 @@ PS1="$PS1\[\033[00m\]\n\$ "               # gray:  "\n$ "
 # common mistakes i make
 alias cd..='cd ..'
 alias ks='ls'
+
+# cute
 alias cls='clear'
+alias 'ps?'='ps ax | grep '
 
 # text editor luvs
 alias vim='gvim'
