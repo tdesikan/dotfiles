@@ -1,5 +1,3 @@
-# set the time - VMWARE fs up a lot
-
 # rvm
 echo ">>> RVM"
 export PATH=/var/lib/gems/1.8/bin:$PATH
@@ -7,9 +5,9 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 rvm use 1.9.2-p180 --default # always this Ruby
 
 # gvm
-echo ">>> GVM"
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-gvm use release.r60.3
+# echo ">>> GVM"
+# [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# gvm use release.r60.3
 
 # some custom prompt stuffs
 export PS1="\[\033[1;30m\]["              # gray:  "["
