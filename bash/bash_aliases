@@ -1,8 +1,7 @@
 # rvm
 echo ">>> RVM"
-export PATH=/var/lib/gems/1.8/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-rvm use 1.9.2-p180 --default # always this Ruby
+# rvm use 1.9.2-p180 --default # always this Ruby
 
 # gvm
 # echo ">>> GVM"
