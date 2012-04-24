@@ -166,6 +166,10 @@ else
   colorscheme metacosm
 endif
 
+" Need Windows Ctrl-C, Ctlr-V
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
 " MacVim bindings
 if has("gui_macvim")
   let macvim_hig_shift_movement = 1
