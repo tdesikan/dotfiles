@@ -20,8 +20,7 @@ ln -s ${HOME}/.dotfiles/bash/bash_profile ${HOME}/.bash_profile
 ln -s ${HOME}/.dotfiles/bash/bash_aliases ${HOME}/.bash_aliases
 ln -s ${HOME}/.dotfiles/bash/bash_secret ${HOME}/.bash_secret
 
-# setup rvm
+# setup rvm, gem, git
 ln -s ${HOME}/.dotfiles/rvm/rvmrc ${HOME}/.rvmrc
-
-# setup gem
 ln -s ${HOME}/.dotfiles/gem/gemrc ${HOME}/.gemrc
+ln -s ${HOME}/.dotfiles/git/gitconfig ${HOME}/.gitconfig
