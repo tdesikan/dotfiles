@@ -3,11 +3,6 @@ echo ">>> RVM"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 # rvm use 1.9.2-p180 --default # always this Ruby
 
-# gvm
-# echo ">>> GVM"
-# [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-# gvm use release.r60.3
-
 # some custom prompt stuffs
 export PS1="\[\033[1;30m\]["              # gray:  "["
 PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
@@ -25,6 +20,8 @@ alias ks='ls'
 # cute
 alias cls='clear'
 alias 'ps?'='ps ax | grep '
+alias finder='nautilus .'
+alias ff='finder'
 
 # text editor luvs
 alias vim='gvim'
