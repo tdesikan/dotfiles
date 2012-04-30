@@ -24,3 +24,6 @@ ln -s ${HOME}/.dotfiles/bash/bash_secret ${HOME}/.bash_secret
 ln -s ${HOME}/.dotfiles/rvm/rvmrc ${HOME}/.rvmrc
 ln -s ${HOME}/.dotfiles/gem/gemrc ${HOME}/.gemrc
 ln -s ${HOME}/.dotfiles/git/gitconfig ${HOME}/.gitconfig
+
+# utils
+ln -s ${HOME}/.dotfiles/utils/curl_timing_template ${HOME}/.curl_timing_template
