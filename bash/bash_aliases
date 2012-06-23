@@ -3,7 +3,7 @@ echo ">>> RVM"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 # rvm use 1.9.2-p180 --default # always this Ruby
 
-# some custom prompt stuffs
+# custom prompt
 export PS1="\[\033[1;30m\]["              # gray:  "["
 PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
 PS1="$PS1\[\033[1;30m\]] "                # gray:  "] "
@@ -20,28 +20,10 @@ alias ks='ls'
 # cute
 alias cls='clear'
 alias 'ps?'='ps ax | grep '
-alias finder='nautilus .'
-alias ff='finder'
 
 # text editor luvs
 alias vim='gvim'
 
-# Some Mac stuuff ... on Mac, download and install MacVim
-if [[ `uname` == 'Darwin' ]]; then
- 
-  # Added this for bash completion on the Mac
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-  fi
-
-  # Added this for git bash completion on the Mac
-  if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then 
-    . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
-  fi
-
-  alias gvim='open -a MacVim.app'
-  alias gedit='open -a gedit.app'
-fi
 
 # curl tricks
 alias curldroid='curl -o /dev/null -v -H "User-Agent: Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" '
@@ -53,10 +35,4 @@ alias curlt='curlv -w "@$HOME/.curl_timing_template" '
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
   export PATH="$HOME/bin:$PATH"
-fi
-
-# add Go
-if [ -d "$HOME/workspace/ext/go/bin" ] ; then
-  export PATH="$HOME/workspace/ext/go/bin:$PATH"
-  export GOROOT="$HOME/workspace/ext/go"
 fi

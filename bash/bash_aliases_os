@@ -1,0 +1,31 @@
+# OS-specific aliases here
+
+
+# Mac
+# install MacVim, Sublime, GITX
+#
+if [[ `uname` == 'Darwin' ]]; then
+ 
+  # bash completion
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
+
+  # git bash completion
+  if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then 
+    . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+  fi
+
+  alias gvim='open -a MacVim.app'
+  alias gedit='open -a gedit.app'
+fi
+
+# Ubuntu 12.04
+#
+if [[ `uname` == 'Linux' ]]; then
+
+  # file browser
+  alias finder='nautilus .'
+  alias open='finder'
+fi
+
