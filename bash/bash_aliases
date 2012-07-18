@@ -49,6 +49,8 @@ alias curliphone='curl -o /dev/null -v -H "User-Agent: Mozilla/5.0 (iPhone; U; C
 alias curlv='curl -o /dev/null -v '
 alias curlc='curlv -b cookies.txt -c cookies.txt '
 alias curlt='curlv -w "@$HOME/.curl_timing_template" '
+# curl check if internet works
+alias chk='curlv google.com'
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -59,4 +61,7 @@ fi
 if [ -d "$HOME/workspace/ext/go/bin" ] ; then
   export PATH="$HOME/workspace/ext/go/bin:$PATH"
   export GOROOT="$HOME/workspace/ext/go"
+
+  export MOOV_HOME="$HOME/workspace/moov"
+  export GOPATH=$MOOV_HOME
 fi
