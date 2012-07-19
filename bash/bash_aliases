@@ -20,6 +20,8 @@ alias ks='ls'
 # cute
 alias cls='clear'
 alias 'ps?'='ps ax | grep '
+alias finder='nautilus .'
+alias ff='finder'
 
 # text editor luvs
 alias vim='gvim'
