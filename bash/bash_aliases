@@ -11,6 +11,9 @@ alias ff='finder'
 # text editor luvs
 alias vim='gvim'
 
+# ls
+alias dir='ls -la --color=auto'
+alias ls='ls --color=auto'
 
 # curl tricks
 alias curldroid='curl -o /dev/null -v -H "User-Agent: Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" '
