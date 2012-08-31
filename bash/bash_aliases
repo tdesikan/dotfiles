@@ -1,18 +1,3 @@
-# rvm
-echo ">>> RVM"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-# rvm use 1.9.2-p180 --default # always this Ruby
-
-# custom prompt
-export PS1="\[\033[1;30m\]["              # gray:  "["
-PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
-PS1="$PS1\[\033[1;30m\]] "                # gray:  "] "
-PS1="$PS1\[\033[0;31m\]\$(rvm-prompt)"    # red: " " + $rvm_gemset
-PS1="$PS1\[\e[33;1m\]\$(__git_ps1)"       # yellow: " *" + $git_branch
-PS1="$PS1\[\033[1;37m\] : "               # white :
-PS1="$PS1\[\033[01;34m\]\w"               # blue: $working_dir
-PS1="$PS1\[\033[00m\]\n\$ "               # gray:  "\n$ "
-
 # common mistakes i make
 alias cd..='cd ..'
 alias ks='ls'

@@ -20,7 +20,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias gedit='open -a gedit.app'
 fi
 
-# Ubuntu 12.04
+# Ubuntu
 #
 if [[ `uname` == 'Linux' ]]; then
 
@@ -29,3 +29,22 @@ if [[ `uname` == 'Linux' ]]; then
   alias open='finder'
 fi
 
+# Pretty custom prompt
+# Load RVM if not Windoze
+#
+export PS1="\[\033[1;30m\]["              # gray:  "["
+PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
+PS1="$PS1\[\033[1;30m\]] "                # gray:  "] "
+
+# RVM doesn't work on Windoze (MINGW32)
+if [[ `uname` != 'MINGW32_NT-6.1' ]]; then
+  echo ">>> RVM"
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+  # add rvm to prompt
+  PS1="$PS1\[\033[0;31m\]\$(rvm-prompt)"    # red: " " + $rvm_gemset
+fi
+
+PS1="$PS1\[\e[33;1m\]\$(__git_ps1)"       # yellow: " *" + $git_branch
+PS1="$PS1\[\033[1;37m\] : "               # white :
+PS1="$PS1\[\033[01;34m\]\w"               # blue: $working_dir
+PS1="$PS1\[\033[00m\]\n\$ "               # gray:  "\n$ "

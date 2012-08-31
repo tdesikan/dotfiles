@@ -11,8 +11,14 @@ echo "Updating dotfiles"
 cd ${HOME}/.dotfiles && git pull && git submodule update --init
 
 # setup vim
-ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/.vimrc
-ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
+# on windows: .vimrc -> _vimrc, .vim/ -> vimfiles/
+if [[ `uname` == 'MINGW32_NT-6.1' ]]; then
+  ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/_vimrc
+  ln -s ${HOME}/.dotfiles/vim ${HOME}/vimfiles
+else
+  ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/.vimrc
+  ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
+fi
 
 # setup bash
 ln -s ${HOME}/.dotfiles/bash/bashrc ${HOME}/.bashrc
