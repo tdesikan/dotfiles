@@ -12,7 +12,7 @@ cd ${HOME}/.dotfiles && git pull && git submodule update --init
 
 # setup vim
 # on windows: .vimrc -> _vimrc, .vim/ -> vimfiles/
-if [[ `uname` == 'MINGW32_NT-6.1' ]]; then
+if [[ `uname` == 'MINGW32_NT'* ]]; then
   ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/_vimrc
   ln -s ${HOME}/.dotfiles/vim ${HOME}/vimfiles
 else

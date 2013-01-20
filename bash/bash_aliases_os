@@ -29,15 +29,20 @@ if [[ `uname` == 'Linux' ]]; then
   alias open='finder'
 fi
 
+# Windows (MINGW32)
+#
+if [[ `uname` == 'MINGW32'* ]]; then
+  # echo ">>> Windoze"
+fi
+
 # Pretty custom prompt
-# Load RVM if not Windoze
 #
 export PS1="\[\033[1;30m\]["              # gray:  "["
 PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
 PS1="$PS1\[\033[1;30m\]] "                # gray:  "] "
 
-# RVM doesn't work on Windoze (MINGW32)
-if [[ `uname` != 'MINGW32_NT-6.1' ]]; then
+# RVM doesn't work on Windoze 
+if [[ ( `uname` == 'Darwin' ) || ( `uname` == 'Linux' ) ]]; then
   echo ">>> RVM"
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
   # add rvm to prompt
