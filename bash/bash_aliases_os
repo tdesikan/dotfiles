@@ -32,7 +32,7 @@ fi
 # Windows (MINGW32)
 #
 if [[ `uname` == 'MINGW32'* ]]; then
-  # echo ">>> Windoze"
+  echo ">>> Windoze"
 fi
 
 # Pretty custom prompt
