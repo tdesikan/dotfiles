@@ -30,10 +30,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # add Go
-if [ -d "$HOME/workspace/ext/go/bin" ] ; then
-  export PATH="$HOME/workspace/ext/go/bin:$PATH"
-  export GOROOT="$HOME/workspace/ext/go"
-
+if [ -d "$HOME/.gvm" ] ; then
   export MOOV_HOME="$HOME/workspace/moov"
-  export GOPATH=$MOOV_HOME
+  export PATH=$PATH:$HOME/workspace/dev/shell-utils/build
 fi
