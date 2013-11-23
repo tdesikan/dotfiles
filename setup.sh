@@ -26,6 +26,7 @@ ln -s ${HOME}/.dotfiles/bash/bash_profile ${HOME}/.bash_profile
 ln -s ${HOME}/.dotfiles/bash/bash_aliases ${HOME}/.bash_aliases
 ln -s ${HOME}/.dotfiles/bash/bash_aliases_os ${HOME}/.bash_aliases_os
 ln -s ${HOME}/.dotfiles/bash/bash_secret ${HOME}/.bash_secret
+ln -s ${HOME}/.dotfiles/bash/git-prompt ${HOME}/.git-prompt
 
 # setup rvm, gem, git
 ln -s ${HOME}/.dotfiles/rvm/rvmrc ${HOME}/.rvmrc
