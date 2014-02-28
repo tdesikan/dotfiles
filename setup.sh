@@ -20,6 +20,13 @@ else
   ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
 fi
 
+# setup submlime text 2
+if [[ `uname` == 'Darwin'* ]]; then
+  ln -s ${HOME}/.dotfiles/sublime ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+else
+  # TODO for Linux and Windoze
+fi
+
 # setup bash
 ln -s ${HOME}/.dotfiles/bash/bashrc ${HOME}/.bashrc
 ln -s ${HOME}/.dotfiles/bash/bash_profile ${HOME}/.bash_profile
