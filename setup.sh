@@ -25,6 +25,7 @@ if [[ `uname` == 'Darwin'* ]]; then
   ln -s ${HOME}/.dotfiles/sublime ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 else
   # TODO for Linux and Windoze
+  echo "howdi non-mac"
 fi
 
 # setup bash
