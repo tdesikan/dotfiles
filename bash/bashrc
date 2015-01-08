@@ -93,6 +93,11 @@ if [ -f ~/.bash_aliases_os ]; then
     . ~/.bash_aliases_os
 fi
 
+# Git prompt
+if [ -f ~/.git-prompt ]; then
+    . ~/.git-prompt
+fi
+
 # Some "secret" bash commands you don't want to commit to GitHub
 if [ -f ~/.bash_secret ]; then
     . ~/.bash_secret

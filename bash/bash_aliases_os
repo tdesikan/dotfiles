@@ -16,6 +16,9 @@ if [[ `uname` == 'Darwin' ]]; then
     . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
   fi
 
+  # ls color
+  alias ls='ls -Gp'
+
   alias gvim='open -a MacVim.app'
   alias gedit='open -a gedit.app'
 fi
@@ -37,6 +40,9 @@ fi
 #
 if [[ `uname` == 'MINGW32'* ]]; then
   echo ">>> Windoze"
+
+  # ls color
+  alias ls='ls --color=auto'
 fi
 
 # Pretty custom prompt
