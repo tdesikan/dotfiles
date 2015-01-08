@@ -27,6 +27,10 @@ if [[ `uname` == 'Linux' ]]; then
   # file browser
   alias finder='nautilus .'
   alias open='finder'
+
+  # time drift when Guest OS in VM
+  alias fixt='sudo ntpdate ntp.ubuntu.com'
+
 fi
 
 # Windows (MINGW32)
@@ -40,14 +44,6 @@ fi
 export PS1="\[\033[1;30m\]["              # gray:  "["
 PS1="$PS1\[\033[01;32m\]\u@\h"            # green:  $user_name @ $host_name
 PS1="$PS1\[\033[1;30m\]] "                # gray:  "] "
-
-# RVM doesn't work on Windoze 
-if [[ ( `uname` == 'Darwin' ) || ( `uname` == 'Linux' ) ]]; then
-  echo ">>> RVM"
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-  # add rvm to prompt
-  PS1="$PS1\[\033[0;31m\]\$(rvm-prompt)"    # red: " " + $rvm_gemset
-fi
 
 PS1="$PS1\[\e[33;1m\]\$(__git_ps1)"       # yellow: " *" + $git_branch
 PS1="$PS1\[\033[1;37m\] : "               # white :

@@ -29,11 +29,7 @@ if [ -d "$HOME/bin" ] ; then
   export PATH="$HOME/bin:$PATH"
 fi
 
-# add Go
-if [ -d "$HOME/workspace/ext/go/bin" ] ; then
-  export PATH="$HOME/workspace/ext/go/bin:$PATH"
-  export GOROOT="$HOME/workspace/ext/go"
-
-  export MOOV_HOME="$HOME/workspace/moov"
-  export GOPATH=$MOOV_HOME
+# node global packages
+if [ -d "$HOME/.node/bin" ] ; then
+  export PATH="$HOME/.node/bin:$PATH"
 fi
