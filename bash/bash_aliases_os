@@ -30,6 +30,7 @@ if [[ `uname` == 'Linux' ]]; then
   # file browser
   alias finder='nautilus .'
   alias open='finder'
+  alias ff='finder'
 
   # time drift when Guest OS in VM
   alias fixt='sudo ntpdate ntp.ubuntu.com'

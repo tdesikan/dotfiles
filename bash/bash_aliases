@@ -5,8 +5,6 @@ alias ks='ls'
 # cute
 alias cls='clear'
 alias 'ps?'='ps ax | grep '
-alias finder='nautilus .'
-alias ff='finder'
 
 # text editor luvs
 alias vim='gvim'
@@ -23,6 +21,10 @@ alias curlt='curlv -w "@$HOME/.curl_timing_template" '
 # curl check if internet works
 alias chk='curlv google.com'
 
+##
+## MANAGE PATH
+##
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
   export PATH="$HOME/bin:$PATH"
@@ -31,4 +33,10 @@ fi
 # node global packages
 if [ -d "$HOME/.node/bin" ] ; then
   export PATH="$HOME/.node/bin:$PATH"
+fi
+
+# rvm
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
