@@ -22,6 +22,7 @@ fi
 
 # setup submlime text 2
 if [[ `uname` == 'Darwin'* ]]; then
+  rm -rf ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
   ln -s ${HOME}/.dotfiles/sublime ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 else
   # TODO for Linux and Windoze
