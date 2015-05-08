@@ -22,9 +22,6 @@ if [[ `uname` == 'Darwin' ]]; then
   alias gvim='open -a MacVim.app'
   alias gedit='open -a gedit.app'
 
-  # go
-  export GOPATH="$HOME/workspace/banyan/go"
-
   # docker
   source $HOME/workspace/google-cloud-sdk/path.bash.inc
   $(boot2docker shellinit)
