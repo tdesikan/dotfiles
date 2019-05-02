@@ -4,30 +4,10 @@ if [ ! -d ${HOME}/.dotfiles ] ; then
   echo "No dotfiles - checking out for you"
   echo $HOME
   cd ${HOME} && git clone git@github.com:tdesikan/dotfiles.git .dotfiles
-  cd ${HOME}/.dotfiles &&  git submodule update --init
 fi
 
 echo "Updating dotfiles"
-cd ${HOME}/.dotfiles && git pull && git submodule update --init
-
-# setup vim
-# on windows: .vimrc -> _vimrc, .vim/ -> vimfiles/
-if [[ `uname` == 'MINGW32_NT'* ]]; then
-  ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/_vimrc
-  ln -s ${HOME}/.dotfiles/vim ${HOME}/vimfiles
-else
-  ln -s ${HOME}/.dotfiles/vim/vimrc ${HOME}/.vimrc
-  ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
-fi
-
-# setup submlime text 2
-if [[ `uname` == 'Darwin'* ]]; then
-  rm -rf ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
-  ln -s ${HOME}/.dotfiles/sublime ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
-else
-  # TODO for Linux and Windoze
-  echo "howdi non-mac"
-fi
+cd ${HOME}/.dotfiles && git pull
 
 # setup bash
 ln -s ${HOME}/.dotfiles/bash/bashrc ${HOME}/.bashrc
