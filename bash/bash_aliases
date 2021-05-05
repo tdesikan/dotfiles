@@ -29,20 +29,3 @@ alias chk='curlv google.com'
 if [ -d "$HOME/bin" ] ; then
   export PATH="$HOME/bin:$PATH"
 fi
-
-# node global packages
-if [ -d "$HOME/.node/bin" ] ; then
-  export PATH="$HOME/.node/bin:$PATH"
-fi
-
-# rvm
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
-  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-  source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-fi
-
-# go packages
-if [ -d "/usr/local/go/bin" ] ; then
-  export PATH=$PATH:/usr/local/go/bin
-  export GOPATH="$HOME/workspace/banyan/go"
-fi

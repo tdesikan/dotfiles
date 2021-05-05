@@ -5,6 +5,10 @@
 # install MacVim, Sublime, GITX
 #
 if [[ `uname` == 'Darwin' ]]; then
+  # hates zsh
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+
+  eval "$(/opt/homebrew/bin/brew shellenv)"
  
   # bash completion
   if [ -f `brew --prefix`/etc/bash_completion ]; then
@@ -21,10 +25,6 @@ if [[ `uname` == 'Darwin' ]]; then
 
   alias gvim='open -a MacVim.app'
   alias gedit='open -a gedit.app'
-
-  # docker
-  source $HOME/workspace/google-cloud-sdk/path.bash.inc
-  $(boot2docker shellinit)
 fi
 
 # Ubuntu
