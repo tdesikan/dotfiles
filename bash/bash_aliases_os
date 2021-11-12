@@ -39,6 +39,11 @@ if [[ `uname` == 'Linux' ]]; then
   # time drift when Guest OS in VM
   alias fixt='sudo ntpdate ntp.ubuntu.com'
 
+  # gem install
+  export GEM_HOME=$HOME/.gem
+  export GEM_PATH=$HOME/.gem
+  export PATH=$PATH:$GEM_PATH/bin
+
 fi
 
 # Windows (MINGW32)
